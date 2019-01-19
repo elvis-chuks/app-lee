@@ -1,11 +1,11 @@
 from flask import Flask
-app = Flask(__name__)
+application = Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def hello():
     return 'hey this is applee'
 
-@app.route("/test")
+@application.route("/test")
 def test():
     import pprint
     from apiclient.discovery import build
