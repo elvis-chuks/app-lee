@@ -3,6 +3,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
+    return 'hey this is applee'
+
+@app.route("/test")
+def test():
     import pprint
     from apiclient.discovery import build
     import socket
@@ -21,6 +25,8 @@ def hello():
             return 'mobile friendly'
     except socket.timeout:
         return 'there appears to be a problem at the moment, please try again later'
+
+
 
 if __name__ == "__main__":
     app.run()
