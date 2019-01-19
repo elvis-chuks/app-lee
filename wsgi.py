@@ -30,7 +30,7 @@ def mail():
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
     fromaddr = "appleeweb@gmail.com"
-    toaddr = session['email']
+    toaddr = "celvischuks@gmail.com"
     msg = MIMEMultipart()
     msg['From'] = fromaddr
     msg['To'] = toaddr
