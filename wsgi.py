@@ -11,7 +11,7 @@ def test():
     from apiclient.discovery import build
     import socket
             #make api call to googles urlTestingTools
-    API_KEY = 'AIzaSyACKc0SQ80qbBwgVnJUaBq_XVrmRHr8Ymw'
+    API_KEY = '<your api key>'
     service = build('searchconsole', 'v1', developerKey=API_KEY)
     url = 'https://google.com'
     params = {
@@ -29,8 +29,8 @@ def test():
 def mail():
     from email.mime.multipart import MIMEMultipart
     from email.mime.text import MIMEText
-    fromaddr = "appleeweb@gmail.com"
-    toaddr = "celvischuks@gmail.com"
+    fromaddr = "<your email>"
+    toaddr = "<email>"
     msg = MIMEMultipart()
     msg['From'] = fromaddr
     msg['To'] = toaddr
@@ -65,7 +65,7 @@ def mail():
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.ehlo()
     s.starttls()
-    s.login("appleeweb@gmail.com", "@123Applee")
+    s.login("email", "password")
     text = msg.as_string()
     s.sendmail(fromaddr, toaddr, text)
     s.quit()
